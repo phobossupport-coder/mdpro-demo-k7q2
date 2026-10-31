@@ -686,8 +686,12 @@ function seek(t){
   const v = video(els[cur]); if (!v) return;
   ensureSrc(v);
   v.closest('.player').classList.add('started');
-  const go = () => { v.currentTime = +t; v.play().catch(()=>{}); };
-  v.readyState >= 1 ? go() : v.addEventListener('loadedmetadata', go, {once:true});
+  if (v.readyState >= 1){ v.currentTime = +t; v.play().catch(()=>{}); }
+  else {
+    // phones don't preload: start playback inside the tap so loading begins, then jump once the length is known
+    v.addEventListener('loadedmetadata', () => { v.currentTime = +t; }, {once:true});
+    v.play().catch(()=>{});
+  }
   v.closest('.player').scrollIntoView({behavior:'smooth', block:'center'});
 }
 
