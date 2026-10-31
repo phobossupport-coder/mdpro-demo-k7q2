@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Мобильный детейлинг PRO</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%2307080A%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2722%27 fill=%27none%27 stroke=%27%23C2A877%27 stroke-width=%272%27/%3E%3Cpath d=%27M27 22v20l16-10z%27 fill=%27%23C2A877%27/%3E%3C/svg%3E">
+<style>/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-300i-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-300i-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-300i-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-400i-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-400i-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-400i-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-300-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-300-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-300-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-400-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-500-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/CormorantGaramond-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/Onest-300-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/Onest-300-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/Onest-300-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/Onest-400-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/Onest-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/Onest-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/Onest-500-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/Onest-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/Onest-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Tenor Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/TenorSans-400-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Tenor Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/TenorSans-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Tenor Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/TenorSans-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}</style>
+<style>
+:root{
+  --ob:#07080A; --s1:#0D0F12; --s2:#14171B; --hair:rgba(236,230,218,.12); --hair2:rgba(236,230,218,.22);
+  --ink:#EEEAE2; --soft:#BDB7AC; --mute:#7F7A71;
+  --gold:#C2A877; --gold2:#DCC69C;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --caps:'Tenor Sans', 'Helvetica Neue', Arial, sans-serif;
+  --text:'Onest', 'Segoe UI', Arial, sans-serif;
+  --rail:288px;
+  color-scheme:dark;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{font-variant-numeric:lining-nums;height:100%;background:var(--ob);color:var(--ink);font-family:var(--text);font-weight:300;-webkit-font-smoothing:antialiased}
+body{overflow:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+img{display:block}
+[hidden]{display:none!important}
+.caps{font-family:var(--caps);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase}
+
+/* buttons: rectangular, hairline, tracked caps */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:50px;padding:0 28px;border:1px solid var(--hair2);font-family:var(--caps);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;transition:background .25s,color .25s,border-color .25s}
+.btn svg{width:14px;height:14px}
+.btn:hover{border-color:var(--ink);background:var(--ink);color:var(--ob)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#16120A}
+.btn.gold:hover{background:var(--gold2);border-color:var(--gold2)}
+
+/* ---------- shell ---------- */
+.app{display:grid;grid-template-columns:var(--rail) 1fr;height:100%}
+.rail{background:var(--s1);border-right:1px solid var(--hair);display:flex;flex-direction:column;min-height:0}
+.brand{padding:34px 28px 26px;border-bottom:1px solid var(--hair);text-align:left}
+.brand .caps{color:var(--gold);font-size:10.5px}
+.brand b{display:block;margin-top:12px;font-family:var(--serif);font-weight:400;font-size:27px;line-height:1.05}
+.brand span{display:block;margin-top:14px;font-size:12.5px;color:var(--mute)}
+.progress{height:1px;background:var(--hair);margin-top:12px}
+.progress i{display:block;height:1px;width:0;background:var(--gold);transition:width .4s var(--ease)}
+.toc{overflow-y:auto;padding:6px 0 32px;flex:1;scrollbar-width:thin;scrollbar-color:var(--hair) transparent}
+.toc h4{font-family:var(--caps);font-weight:400;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);padding:26px 28px 10px}
+.toc h4 i{font-style:normal;color:var(--gold);margin-right:10px}
+.toc button{display:grid;grid-template-columns:34px 1fr;gap:6px;width:100%;text-align:left;padding:8px 28px;font-size:13.5px;line-height:1.4;color:var(--soft);transition:color .2s}
+.toc button em{font-style:normal;font-family:var(--serif);font-size:16px;line-height:1.2;color:var(--mute)}
+.toc button:hover{color:var(--ink)}
+.toc button.on{color:var(--ink);background:linear-gradient(90deg,rgba(194,168,119,.10),transparent)}
+.toc button.on em{color:var(--gold)}
+.toc button.seen em::after{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.7;margin-left:5px;vertical-align:3px}
+
+.stage{position:relative;min-width:0;min-height:0;overflow:hidden}
+.slide{position:absolute;inset:0;isolation:isolate;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s;scrollbar-width:thin;scrollbar-color:var(--hair) transparent}
+.slide.on{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
+.slide:not(.on){pointer-events:none}
+.slide.on{z-index:1}
+
+.bar{position:fixed;z-index:30;right:calc(28px + env(safe-area-inset-right, 0px));bottom:calc(24px + env(safe-area-inset-bottom, 0px));display:flex;align-items:stretch;background:rgba(7,8,10,.86);border:1px solid var(--hair);backdrop-filter:blur(12px)}
+.bar .count{display:flex;align-items:center;padding:0 18px;font-family:var(--serif);font-size:17px;color:var(--soft);border-right:1px solid var(--hair)}
+.bar button{width:48px;height:48px;display:grid;place-items:center;border-left:1px solid var(--hair);transition:background .2s,color .2s}
+.bar button:first-of-type{border-left:0}
+.bar button:hover{background:var(--ink);color:var(--ob)}
+.bar svg{width:16px;height:16px}
+.menu{display:none!important}
+
+/* ---------- cover ---------- */
+.cover{display:grid;grid-template-columns:1fr 1fr;min-height:100%}
+.cover .tx{padding:72px 64px 64px 72px;display:flex;flex-direction:column;justify-content:space-between;gap:56px;position:relative;z-index:1}
+.cover .ph{position:relative;overflow:hidden}
+.cover .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.cover .ph::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--ob) 0%,rgba(7,8,10,0) 38%),linear-gradient(0deg,rgba(7,8,10,.55),transparent 40%)}
+.cover .top .caps{color:var(--gold)}
+.cover h1{font-family:var(--serif);font-weight:300;font-size:clamp(56px,6.4vw,112px);line-height:.92;letter-spacing:-.01em;margin-top:28px}
+.cover .rule{width:64px;height:1px;background:var(--gold);margin:40px 0 28px}
+.cover p.sub{font-size:16.5px;line-height:1.75;color:var(--soft);max-width:40ch}
+.cover .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.parts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--hair)}
+.parts button{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:baseline;text-align:left;padding:13px 16px 13px 0;border-bottom:1px solid var(--hair);transition:color .2s}
+.parts button:nth-child(odd){margin-right:24px}
+.parts em{font-style:normal;font-family:var(--serif);font-size:16px;color:var(--gold)}
+.parts b{font-weight:400;font-size:14px}
+.parts span{font-size:12px;color:var(--mute)}
+.parts button:hover b{color:var(--gold2)}
+
+/* ---------- part divider ---------- */
+.part{min-height:100%;display:grid;align-content:end;padding:72px 72px 112px}
+.part .bg{position:absolute;inset:0;z-index:-1}
+.part .bg img{width:100%;height:100%;object-fit:cover}
+.part .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,var(--ob) 8%,rgba(7,8,10,.72) 45%,rgba(7,8,10,.35) 100%)}
+.part .roman{font-family:var(--serif);font-weight:300;font-size:120px;line-height:.8;color:var(--gold)}
+.part .meta{color:var(--soft);margin-top:28px}
+.part h2{font-family:var(--serif);font-weight:300;font-size:clamp(48px,5.6vw,96px);line-height:.95;margin-top:14px;max-width:14ch}
+.part p.sub{margin-top:22px;font-size:17px;line-height:1.7;color:var(--soft);max-width:46ch}
+.part ol{list-style:none;margin-top:48px;border-top:1px solid var(--hair2);max-width:860px}
+.part li button{display:grid;grid-template-columns:56px 1fr auto;gap:12px;width:100%;text-align:left;padding:16px 0;border-bottom:1px solid var(--hair);font-size:16px;align-items:baseline;transition:color .2s,padding .3s var(--ease)}
+.part li em{font-style:normal;font-family:var(--serif);font-size:20px;color:var(--gold)}
+.part li small{font-family:var(--serif);font-size:17px;color:var(--mute)}
+.part li button:hover{color:var(--gold2);padding-left:8px}
+
+/* ---------- lesson ---------- */
+.hero{position:relative;height:max(440px,66vh);overflow:hidden;display:grid;align-content:end}
+.hero .img{position:absolute;inset:0;z-index:-1;display:flex;gap:2px}
+.hero .img img{flex:1;min-width:0;height:100%;object-fit:cover}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,var(--ob) 0%,rgba(7,8,10,.55) 42%,rgba(7,8,10,.05) 75%),linear-gradient(90deg,rgba(7,8,10,.55),transparent 60%)}
+.hero .in{padding:0 72px 56px;display:flex;justify-content:space-between;align-items:end;gap:40px}
+.hero .caps{color:var(--gold)}
+.hero .caps b{font-weight:400;color:var(--soft);margin-left:18px}
+.hero h2{font-family:var(--serif);font-weight:300;font-size:clamp(44px,5vw,84px);line-height:.98;letter-spacing:-.005em;margin-top:18px;max-width:16ch}
+.hero .num{font-family:var(--serif);font-weight:300;font-size:clamp(110px,13vw,210px);line-height:.75;color:transparent;-webkit-text-stroke:1px rgba(220,198,156,.55);flex:none}
+
+.body{padding:72px 72px 140px;max-width:1340px}
+.sec{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;padding:56px 0;border-top:1px solid var(--hair)}
+.sec:first-child{border-top:0;padding-top:0}
+.sec>.caps{color:var(--mute);padding-top:8px}
+.sec>div{min-width:0}
+.lead{font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.2vw,34px);line-height:1.3;color:var(--ink);max-width:34ch}
+.pts{list-style:none;margin-top:40px;counter-reset:p;display:grid;grid-template-columns:1fr 1fr;column-gap:48px}
+.pts li{position:relative;padding:20px 0 20px 52px;border-top:1px solid var(--hair);font-size:15.5px;line-height:1.6;color:var(--soft);counter-increment:p}
+.pts li::before{content:counter(p, decimal-leading-zero);position:absolute;left:0;top:16px;font-family:var(--serif);font-size:22px;color:var(--gold)}
+.tip{margin-top:44px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;padding:32px 0 0;border-top:1px solid var(--gold)}
+.tip .caps{color:var(--gold);padding-top:10px;white-space:nowrap}
+.tip p{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(22px,1.8vw,28px);line-height:1.4}
+.prodbox{margin-top:40px}
+.prodbox>.caps{color:var(--gold);margin-bottom:14px}
+.prods{display:flex;flex-wrap:wrap;row-gap:8px}
+.prods span{font-family:var(--caps);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);padding:6px 18px 6px 0;margin-right:18px;border-right:1px solid var(--hair2)}
+.prods span:last-child{border-right:0}
+
+.player{position:relative;background:#000;overflow:hidden;aspect-ratio:16/9;outline:1px solid var(--hair)}
+.player video{width:100%;height:100%;display:block;background:#000}
+.cover-play{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:22px;background:radial-gradient(ellipse at center,rgba(7,8,10,.15),rgba(7,8,10,.6));color:var(--ink)}
+.cover-play i{width:96px;height:96px;border-radius:50%;border:1px solid rgba(238,234,226,.7);display:grid;place-items:center;transition:background .3s,border-color .3s,transform .4s var(--ease)}
+.cover-play i svg{width:26px;height:26px;margin-left:4px}
+.cover-play:hover i{background:var(--gold);border-color:var(--gold);color:#16120A;transform:scale(1.05)}
+.player.started .cover-play{display:none}
+.player .missing{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:24px;background:rgba(7,8,10,.9);font-size:15px;color:var(--soft);line-height:1.6}
+.player.err .missing{display:grid}
+.vbtns{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:20px}
+.vbtns [id^=resume] .btn{border-color:var(--gold);color:var(--gold2)}
+.vbtns [id^=resume] .btn:hover{background:var(--gold);color:#16120A}
+
+.frames{display:flex;flex-wrap:wrap;gap:6px}
+.frames.even{display:grid;grid-template-columns:repeat(4,1fr)}
+.frame{position:relative;overflow:hidden;aspect-ratio:16/9;flex:1.78 1 220px;background:var(--s2)}
+.frame.v{aspect-ratio:9/16;flex:.5625 1 60px}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),filter .4s;filter:saturate(.9)}
+.frame:hover img{transform:scale(1.035);filter:saturate(1)}
+.frame .tc{position:absolute;left:0;bottom:0;padding:6px 10px;font-family:var(--serif);font-size:16px;background:linear-gradient(0deg,rgba(7,8,10,.8),transparent);width:100%}
+.frame .zoom{position:absolute;right:8px;top:8px;width:34px;height:34px;background:rgba(7,8,10,.7);border:1px solid var(--hair2);display:grid;place-items:center;opacity:0;transition:opacity .25s}
+.frame:hover .zoom,.frame:focus-within .zoom{opacity:1}
+.frame .zoom svg{width:14px;height:14px}
+.frame>button.seek{position:absolute;inset:0}
+.frame.cur{outline:1px solid var(--gold);outline-offset:-1px}
+.frame.cur .tc{color:var(--gold2)}
+
+.nextup{position:relative;display:block;width:100%;height:280px;overflow:hidden;text-align:left;margin-top:16px}
+.nextup img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);filter:brightness(.45)}
+.nextup:hover img{transform:scale(1.03)}
+.nextup .in{position:relative;height:100%;display:flex;flex-direction:column;justify-content:end;padding:36px 40px}
+.nextup .caps{color:var(--gold)}
+.nextup b{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3vw,48px);line-height:1.05;margin-top:12px;max-width:22ch}
+.nextup .arrow{position:absolute;right:40px;bottom:40px;width:56px;height:56px;border:1px solid var(--hair2);display:grid;place-items:center;transition:background .3s,color .3s}
+.nextup:hover .arrow{background:var(--ink);color:var(--ob)}
+.nextup .arrow svg{width:18px;height:18px}
+
+/* ---------- demo build ---------- */
+.player.demo img{width:100%;height:100%;object-fit:cover;filter:brightness(.35) saturate(.7)}
+.demo-note{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:14px;text-align:center;padding:24px}
+.demo-note .caps{color:var(--gold)}
+.demo-note p{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.4vw,34px);line-height:1.25;max-width:24ch}
+.demo-note span:last-child{font-size:13.5px;color:var(--soft)}
+.demo-flag{margin:-12px 0 28px;padding:12px 16px;border:1px solid var(--gold);color:var(--gold2);font-size:13.5px;line-height:1.6;max-width:52ch}
+
+/* ---------- one-tab notice ---------- */
+.tablock{position:fixed;inset:0;z-index:60;background:rgba(4,5,6,.97);display:grid;place-items:center;padding:24px;text-align:center}
+.tablock .caps{color:var(--gold)}
+.tablock p{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3vw,40px);line-height:1.25;max-width:22ch;margin:18px auto 32px}
+img,video{-webkit-user-drag:none;user-select:none}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(4,5,6,.96);display:none;place-items:center;padding:48px 96px}
+.lb.on{display:grid}
+.lb img{max-width:100%;max-height:calc(100vh - 170px);margin:0 auto}
+.lb .cap{margin-top:22px;display:flex;gap:24px;justify-content:center;align-items:center;color:var(--soft)}
+.lb .x,.lb .arr{position:absolute;width:52px;height:52px;border:1px solid var(--hair2);display:grid;place-items:center;transition:background .2s,color .2s}
+.lb .x{top:22px;right:24px}
+.lb .arr{top:50%;transform:translateY(-50%)}
+.lb .arr.l{left:24px}.lb .arr.r{right:24px}
+.lb .x:hover,.lb .arr:hover{background:var(--ink);color:var(--ob)}
+.lb svg{width:16px;height:16px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){
+  .cover{grid-template-columns:1fr}
+  .cover .ph{position:absolute;inset:0;z-index:0;opacity:.45}
+  .cover .ph::after{background:linear-gradient(0deg,var(--ob) 30%,rgba(7,8,10,.4))}
+  .sec{grid-template-columns:minmax(0,1fr);gap:20px}
+  .pts{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  body{overflow:auto}
+  .app{grid-template-columns:1fr;height:auto;min-height:100vh}
+  .rail{position:fixed;inset:0 18% 0 0;z-index:40;transform:translateX(-102%);transition:transform .35s var(--ease)}
+  .rail.open{transform:none;box-shadow:0 0 0 100vmax rgba(4,5,6,.7)}
+  .stage{height:100vh}
+  .menu{display:grid!important}
+  .cover .tx{padding:48px 16px 110px}
+  .parts{grid-template-columns:1fr}
+  .parts button:nth-child(odd){margin-right:0}
+  .part{padding:48px 16px 110px}
+  .part .roman{font-size:84px}
+  .hero{height:62vh}
+  .hero .in{padding:0 16px 32px}
+  .hero .num{display:none}
+  .hero .caps b{display:block;margin:10px 0 0}
+  .body{padding:40px 16px 120px}
+  .sec{padding:40px 0}
+  .tip{grid-template-columns:1fr;gap:12px}
+  .frames.even{grid-template-columns:repeat(2,1fr)}
+  .frame{flex-basis:140px}.frame.v{flex-basis:44px}
+  .vbtns .btn{flex:1}
+  .nextup{height:220px}
+  .nextup .in{padding:24px}
+  .nextup .arrow{right:24px;bottom:24px;width:44px;height:44px}
+  .bar{right:16px;bottom:16px}
+  .lb{padding:72px 16px}
+  .lb .arr{top:auto;bottom:24px;transform:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="rail" id="rail">
+    <div class="brand"><div class="caps">Курс PRO</div><b>Мобильный детейлинг</b><span id="seenTxt">34 видеоурока по порядку</span><div class="progress"><i id="prog"></i></div></div>
+    <nav class="toc" id="toc" aria-label="Уроки"></nav>
+  </aside>
+  <main class="stage" id="stage"></main>
+</div>
+<div class="bar">
+  <span class="count" id="count"></span>
+  <button class="menu" id="menuBtn" aria-label="Список уроков"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <button id="prevBtn" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button id="nextBtn" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
+  <button id="fsBtn" aria-label="Презентация во весь экран"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+</div>
+<div class="tablock" id="tablock" hidden role="alertdialog" aria-labelledby="tablockTitle">
+  <div><div class="caps">Курс открыт в другой вкладке</div><p id="tablockTitle">Курс можно смотреть только в одной вкладке. Продолжите там или вернитесь сюда.</p><button class="btn gold" id="tablockBtn">Смотреть здесь</button></div>
+</div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Кадр из видео">
+  <button class="x" id="lbX" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="arr l" id="lbL" aria-label="Предыдущий кадр"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div><img id="lbImg" alt=""><div class="cap"><span class="caps" id="lbCap"></span><button class="btn gold" id="lbPlay">Смотреть с этого момента</button></div></div>
+  <button class="arr r" id="lbR" aria-label="Следующий кадр"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<script>
+const LESSONS = [{"n": "01", "title": "Вводная лекция", "part": "Вступление", "lead": "Кто такой автор, как он начал с найденного пылесоса и чем детейлинг отличается от обычной мойки: внимание к каждой детали в салоне и снаружи.", "points": ["Детейлинг — каждая кнопка, подстаканник, бардачок, ниша запаски и даже салазки сидений", "Снаружи — не просто мойка: диски, арки, дверные проёмы, проём багажника, лючок бензобака, крыша", "Приезжать на 5–10 минут раньше: к 8:00 быть на месте в 7:50–7:55", "Серьёзность в трёх вещах: пунктуальность, оформленная машина, брендированный мерч", "Старт: фото до/после своей машины, объявление в русскоязычной группе, затем выход на американцев", "Ориентир на премиальные машины: чем дороже авто, тем выше чек"], "tip": "Цель — чтобы клиент сказал «wow, like new»: машина должна быть чище, чем в салоне продаж", "products": []}, {"n": "02", "title": "Как проходит мобильный детейлинг", "part": "Вступление", "lead": "Обзор полного процесса у клиента: прибытие и осмотр, экстерьер, коррекция и защита ЛКП, салон, финальный осмотр и передача ключей.", "points": ["Осмотр при приезде экономит время и даёт повод предложить доп. услугу, например убрать царапину", "Экстерьер от грязного к чистому: двигатель (остывший, электрика под плёнкой), затем колёса, затем кузов", "Подготовка к полировке — ~90% успеха: двухфазная мойка, химия от битума, сушка, обезжиривание изопропиловым спиртом, оклейка", "Салон снизу вверх: пол, сиденья, пластик панелей и дверей, в конце потолок", "Кожу после чистки напитать кондиционером для кожи, иначе высохнет и потрескается", "Финал: стёкла изопропиловым спиртом без разводов (но не экраны), чистые проёмы, коврики на месте"], "tip": "Химию не распыляйте прямо на пластик и кожу — только на щётку или микрофибру, чтобы не забрызгать стёкла и экраны", "products": ["Изопропиловый спирт", "Торнадор", "Кондиционер для кожи", "Малярный скотч"]}, {"n": "03", "title": "Набор оборудования для старта", "part": "Оборудование и химия", "lead": "Минимальный набор, с которым можно начинать с интерьера, и полный арсенал химии и инструмента мобильного детейлера.", "points": ["Минимум: Tuff Stuff, Jay Leno's Garage Leather Conditioner, Invisible Glass, микрофибры, кисточки, щётка для ковролина", "Шуруповёрт DeWalt с круглой щёткой и пылесос с удлинителем — уже можно ездить к клиентам", "Максимум: компрессор с торнадором, три полировальные машинки (Maxshine и две SPTA), пасты Chemical Guys V Line V32–V38 в 4 этапа", "Парогенератор — растопить затвердевшую жвачку или соль на ковролине", "Озонатор убирает запах дыма, животных, плесени; при работе дышать озоном нельзя", "Ещё: щётка из конского волоса, свет для полировки, стремянка, баннер, столик за $100–120", "Химия максимума: Jay Leno's Garage Leather Cleaner, Griot's Garage Smudge Remover, Chemical Guys HydroSlick, Jay Leno's Garage Wheel Cleaner и Tire Shine"], "tip": "Перчатки нужны прежде всего вам: химия впитывается через кожу и попадает в организм", "products": ["Tuff Stuff", "Jay Leno's Garage Leather Conditioner", "Invisible Glass", "Jay Leno's Garage Leather Cleaner", "Griot's Garage Smudge Remover", "Chemical Guys V Line Polish", "DeWalt", "Maxshine"]}, {"n": "04", "title": "Набор оборудования — дополнение 1", "part": "Оборудование и химия", "lead": "Как пользоваться аккумуляторной мобильной мойкой высокого давления: шланг, насадки, режимы, пенная бутылка и уход после работы.", "points": ["Мойка работает от бака с водой или от прямой подачи воды клиента", "Шланг разматывать полностью, без перегибов; штатный ломается — купить отдельный на 25 футов (50 — уже много)", "Насадки 0°, 15°, 25°, 40° и «дождь»; автор моет на 25°, режим мощности P3", "Вода идёт не сразу: насос прокачивает шланг, пока не выйдет воздух", "Шампунь Meguiar's Ultimate Wash развести в пенной бутылке, напенить, помыть, смыть", "Всегда возить второй аккумулятор"], "tip": "После работы спустите воду из шланга курком и сматывайте кольцами — иначе брызги и заломы", "products": ["Meguiar's Ultimate Wash", "Аккумуляторная мойка", "Шланг 25 футов", "Пенная бутылка"]}, {"n": "05", "title": "Набор химии — дополнение 2", "part": "Оборудование и химия", "lead": "Новые позиции химии: универсальный концентрат для интерьера, средства от клея и битума, порошки Flex для экстрактора и две новые керамики.", "points": ["Xpress Interior Cleaner разводится 1:4 (при сильной грязи 1:3), подходит для всего салона; ~$30 хватило уже на 6 машин", "Goo Gone Adhesive Remover снимает клей от деревьев, скотча и наклеек: нанести, подождать ~2 минуты, снять фиброй", "Shop Pro Brake Cleaner — на кузов от битума и смолы: нанести и сразу убрать, не на солнце", "Bridgepoint Flex Fire — 1 ложка на бутылку, щётка на шуруповёрте и экстрактор; Bridgepoint Flex Ice нейтрализует остатки и убирает разводы", "70% изопропиловый спирт: вместо $13 на Amazon — за $3 в Walmart, перелить в свой распылитель", "Nano Bond Ceramic Coating 9H PRO — на одну машину, реально ~1,5 года; Graphene Ceramic Coating 12H (70 мл) — реально 3–4 года", "Средство для дисков ATAS Dimer: 1:10, при сильной грязи 1:6–1:7 — моет двигатель, диски и арки; сильное и дорогое"], "tip": "Ничего не делайте на солнце: средства от клея и битума наносить быстро и только в тени", "products": ["Xpress Interior Cleaner", "Goo Gone Adhesive Remover", "Shop Pro Brake Cleaner", "Bridgepoint Flex Fire", "Bridgepoint Flex Ice", "70% Isopropyl Alcohol Spray", "Nano Bond Ceramic Coating 9H PRO", "ATAS Dimer"]}, {"n": "06", "title": "Набор химии — обновление февраль 2026", "part": "Оборудование и химия", "lead": "Актуальный на февраль 2026 года набор химии автора: что он использует постоянно, как разводит и от чего отказался.", "points": ["Xpress Interior Cleaner — 1:4 с водой в распылителях, подходит ко всему салону, хватает надолго", "Средство первой фазы мойки — 1:10: на кузов и дверные проёмы, немного подождать, на солнце смывать сразу", "Чернитель ковриков 2:1: 2–3 пшика и растереть фиброй — коврик матовый и не скользкий", "Чернитель наружного пластика наносить на фибру; средство для дисков ATAS Dimer разводить 1:6–1:10", "Шампунь без воска даже перед керамикой, затем обезжиривание; Bridgepoint Flex Fire и Flex Ice — для ткани и ковролина через экстрактор", "Хорошая керамика 50 мл — на один большой SUV, стоит в 3 раза дороже, но реально служит 2–3 года", "Постоянно в наборе: Tuff Stuff, Goo Gone, антибитум, кондиционер для кожи, чернитель шин, 70% спирт для стёкол и обезжиривания"], "tip": "Спиртом — только стёкла и обезжиривание, ни в коем случае не экраны", "products": ["Xpress Interior Cleaner", "Bridgepoint Flex Fire", "Bridgepoint Flex Ice", "Tuff Stuff", "Goo Gone Adhesive Remover", "70% Isopropyl Alcohol Spray", "ATAS Dimer", "Чернитель ковриков"]}, {"n": "07", "title": "Оборудование автомобиля", "part": "Оборудование и химия", "lead": "Обзор рабочего вэна Ford Transit Connect 2020: как размещены генератор, бак, насос, компрессор и мойка, сколько стоит обустройство и оклейка.", "points": ["Генератор Champion 4000 (~$1000) не выдвижной, закреплён стропами, бензин доливается на месте", "Бак 40 галлонов хватает на 2 машины, иногда на 3; компрессор 6 галлонов, 175 PSI", "Часто используемая химия — на дверях; в середине пылесос, экстрактор и химия вроде Bridgepoint Flex", "Машина $21 000, оборудование ~$8000–10 000, итого с оклейкой ~$30–35 тыс.; бюджетно — б/у за ~$10 000", "Материалы в Home Depot ~$500–600, стену и крепления сделал знакомый хендимен", "Оклейка: логотип на бортах и капоте, QR-код на Instagram, телефон на ровной поверхности"], "tip": "Насос ставьте ниже бака с водой — иначе не качает; автор сначала поставил наверх", "products": ["Ford Transit Connect", "Champion 4000", "Бак 40 галлонов", "Компрессор 6 галлонов"]}, {"n": "08", "title": "Этапы детейлинга", "part": "Этапы и экстерьер", "lead": "Пошаговая структура полного детейлинга: подкапотка, диски и арки, кузов, салон, полировка и керамика — и почему именно в таком порядке.", "points": ["Двигатель первым: укрыть генератор и аккумулятор, иначе грязь попадёт на вымытый кузов", "Затем диски и арки: смыть под давлением и натереть шампунем; после — полноценная мойка кузова", "Салон: вынуть вещи, коврики, детское кресло; пылесос, химчистка ковролина и сидений химией со щёткой, двери, панель, экраны в конце", "Перед полировкой: двухфазная мойка, антибитум Griot's Garage Smudge Remover, обезжиривание, оклейка пластика и фар скотчем 3M", "Обезжиривать 70% изопропиловым спиртом после каждого этапа полировки; работать участком ~25% капота", "Керамика: капнуть на губку-аппликатор, растереть, 30 секунд выдержки, располировать; неделю не мочить и не мыть", "Гибридная керамика (в наборе автора — Chemical Guys HydroSlick): нанести и растереть сухой фиброй, 1–2 дня не мыть"], "tip": "Полируя, следите не за результатом, а за тем, ровно ли круг прилегает; шнур закидывайте через плечо", "products": ["Griot's Garage Smudge Remover", "70% Isopropyl Alcohol Spray", "Chemical Guys HydroSlick", "3M Masking Tape"]}, {"n": "09", "title": "Мойка двигателя и подкапотного пространства", "part": "Этапы и экстерьер", "lead": "Как безопасно мыть мотор: укрыть электрику, промыть шампунем и кистями, тщательно продуть компрессором и прогреть двигатель.", "points": ["Осмотреть отсек, укрыть генератор и аккумулятор пакетом или плёнкой, снять верхнюю крышку мотора", "Сбить грязь водой, включая внутреннюю сторону капота, нанести Meguiar's Ultimate Wash — тот же шампунь, что для кузова", "Промыть шампунем с кисточкой и тряпкой все углы, снова смыть водой", "Продуть каждый проводок, электрику и зазоры; генератор проверить и продуть отдельно", "Протереть пластик и металл чистой фиброй, грязь из щелей выдуть прямой струёй воздуха", "Завести машину и дать поработать 15–20 минут"], "tip": "Горячий двигатель не мыть и не охлаждать холодной водой — ждать, пока остынет сам", "products": ["Meguiar's Ultimate Wash", "Компрессор DeWalt", "Кисточки", "Микрофибра"]}, {"n": "10", "title": "Мойка дисков и колёс", "part": "Этапы и экстерьер", "lead": "Порядок мойки арок, шин и дисков шампунем и химией для дисков, отдельный инструмент и правила, чтобы не испортить диск.", "points": ["Сначала арки водой под давлением, затем шины и диски", "Meguiar's Ultimate Wash развести с водой в распылителе на глаз, пролить арки, резину, диски; арки — щёткой для арок", "Пена на резине: коричневая — мыть ещё, белая — шина чистая", "Jay Leno's Garage Wheel Cleaner — на щётку или на холодный диск по секторам, сразу тереть, пройти внутрянку и смыть", "Пройти диск ещё раз шампунем Meguiar's Ultimate Wash отдельной мочалкой, промыть щели и суппорты; мочалку — в своём ведре", "Горячую машину ждать полчаса–час, пока остынут колёса и тормоза"], "tip": "Химию для дисков держите не дольше 30 секунд и не на солнце — иначе слезет лак и диск придётся менять", "products": ["Meguiar's Ultimate Wash", "Jay Leno's Garage Wheel Cleaner", "Щётка для арок", "Распылитель", "Мочалка для дисков"]}, {"n": "11", "title": "Мойка дисков — дополнение 1", "part": "Этапы и экстерьер", "lead": "Как отмыть сильно загрязнённые диски от въевшейся тормозной пыли химией в несколько этапов, не повредив покрытие.", "points": ["Нанести Jay Leno's Garage Wheel Cleaner на весь диск, подождать 10–20 секунд, не на солнце", "Держать диск полностью мокрым, без сухих пятен", "Химия меняет цвет и пузырится — сразу тереть кистью, губкой или мочалкой", "Бочку диска пройти длинной щёткой, при необходимости ещё раз сбрызнув средством; за суппортом — прокатить машину и домыть", "Смыть, осмотреть и повторить Wheel Cleaner: сильный налёт уходит в несколько этапов", "Передние диски обычно грязнее задних из-за тормозной пыли"], "tip": "Не давайте химии высохнуть: останутся пятна или «выжжет» глянец — делайте по одному диску за раз", "products": ["Jay Leno's Garage Wheel Cleaner", "Длинная щётка для дисков", "Кисточка"]}, {"n": "12", "title": "Мойка кузова", "part": "Этапы и экстерьер", "lead": "Двухфазная ручная мойка кузова: сбить пыль, шампунь губкой сверху вниз, смыв, сушка, удаление разводов, помёта и воды из щелей.", "points": ["Фаза 1: сбить пыль водой, не подносить пистолет вплотную; промыть зону под дворниками и крышу", "Фаза 2: Meguiar's Ultimate Wash с водой в ведре с сеткой grit guard, отдельная мягкая губка для кузова", "Мыть сверху вниз: капот, лобовое, крыша, окна, верх дверей, низ дверей последним", "Сушить большой мягкой фиброй сверху вниз, регулярно выжимая; щели и зеркала продуть воздухом", "Разводы на стекле — Invisible Glass, затем салфетка с 70% изопропиловым спиртом; помёт — Griot's Garage Smudge Remover на фибру", "Резину высушить обязательно: чернитель наносится только на сухую шину"], "tip": "Не трите губкой пыльную машину — поцарапаете; на солнце смывайте шампунь до подсыхания", "products": ["Meguiar's Ultimate Wash", "Invisible Glass", "70% Isopropyl Alcohol Spray", "Griot's Garage Smudge Remover", "Grit guard", "Adam's Borderless Microfiber"]}, {"n": "13", "title": "Полировка кузова", "part": "Полировка и керамика", "lead": "Подготовка и двухэтапная полировка капота: обезжиривание, оклейка, выбор кругов и паст, скорость, движения и типичные ошибки.", "points": ["Помыть, высушить, обезжирить 70% изопропиловым спиртом в перчатках, оклеить резинки и хром скотчем 3M", "Два этапа: жёсткий полировочный круг, затем мягкий финишный; на этой машине — лёгкая и финишная пасты из набора Chemical Guys V Line", "Паста на круг 3–4 точками; включать машинку только на поверхности, со скорости 1, полировать на 3–4", "Движения «змейкой», на капот не давить — хватает веса машинки; капот делить на 4–6 участков", "Тест: если царапина исчезает под 70% спиртом — полируется, если нет — только покраска", "Перед воском или керамикой снова обезжирить 70% изопропиловым спиртом"], "tip": "Рёбра жёсткости не полируйте по центру — там меньше всего лака, можно его спалить", "products": ["70% Isopropyl Alcohol Spray", "Chemical Guys V Line Polish", "3M Masking Tape", "Maxshine", "ZFE Waffle Buffing", "NextLED NT-2040B"]}, {"n": "14", "title": "Полировка кузова — дополнение 1", "part": "Полировка и керамика", "lead": "Как чистить полировальные круги после работы, чтобы засохшая паста не превратила их в мусор.", "points": ["Мыть круги сразу после полировки — меховые и поролоновые одинаково", "Продуть круг воздухом компрессора: выходит основная часть пасты", "Промыть под струёй воды, лучше тёплой, и отжать руками, сложив вдвое", "Осмотреть: если остались камушки или серая паста — промыть и отжать повторно", "Продуть торнадором и оставить сохнуть там, где не садится пыль", "Между элементами во время работы круг достаточно просто продуть"], "tip": "Не откладывайте мойку: засохшая паста образует твёрдые комочки, которые уже не отстираются", "products": ["Компрессор", "Торнадор"]}, {"n": "15", "title": "Полировка кузова — круги и пасты", "part": "Полировка и керамика", "lead": "Разбор полировальных кругов по жёсткости и паст Chemical Guys V32–V38: какие сочетать и как строить схему в 2 или 3 этапа.", "points": ["Жёсткость кругов проверять руками: мех, жёлтый, оранжевый, синий, чёрный, белый", "Мех — самый режущий, только для сильно поцарапанных машин", "V32 — для меха и жёлтого, V34 — оранжевый, V36 — синий, V38 — финиш на чёрном и белом", "Обычная схема автора — два круга: мех и мягкий финишный", "Маленькие красные круги с V38 — блеск на мелких деталях; оранжевые и зелёные — пожёстче", "Под ручкой полировать малым диаметром, подложив бумагу или фибру", "Пасту выдавить на перчатку, напитать круг, включать на 1–2 скорости (максимум 3), иначе паста разлетится"], "tip": "Изношенная маленькая насадка, у которой виден металл, может поцарапать кузов — меняйте вовремя", "products": ["Chemical Guys V32", "Chemical Guys V34", "Chemical Guys V36", "Chemical Guys V38", "ZFE Waffle Buffing"]}, {"n": "16", "title": "Нанесение керамики", "part": "Полировка и керамика", "lead": "Как наносить настоящую керамику GYEON: подготовка гаража и кузова, нанесение крест-накрест, располировка и выдержка.", "points": ["Только в чистом гараже: прибрать, вымыть и смочить пол, привезти свой свет", "Цикл: мойка, антибитум, обезжиривание, оклейка, полировка, снова обезжиривание 70% спиртом, проверка фонариком", "Взболтать GYEON Paint Coating, смочить аппликатор и нанести на небольшой квадрат крест-накрест, начиная с края элемента", "Через ~30 секунд располировать новой мягкой фиброй, сложенной вчетверо", "После — минимум сутки в гараже, для этой керамики допустимо 5–6 часов", "Набора хватает на 2 машины; срок службы около 2 лет"], "tip": "Перед каждым нанесением сдувайте с аппликатора засохшие кристаллики — иначе поцарапают кузов", "products": ["GYEON Paint Coating Kit", "70% Isopropyl Alcohol Spray", "Мягкая микрофибра", "Фонарик"]}, {"n": "17", "title": "Гибридная керамика", "part": "Полировка и керамика", "lead": "Как наносить гибридную керамику — покрытие между воском и керамикой, которое можно делать без полировки и даже на улице.", "points": ["Обезжирить элемент 70% изопропиловым спиртом, взять чистую новую фибру", "Взболтать флакон гибридной керамики, нанести на фибру, растереть и распределить по поверхности", "Выдержка ~30 секунд; на солнце располировывать сразу, в прохладу — дать немного настояться", "Располировать новой мягкой фиброй, сложенной вчетверо", "Проверить пальцем: «песчинок» быть не должно", "Производитель пишет 12 месяцев, по опыту автора — 8–9 месяцев"], "tip": "В отличие от настоящей керамики, гибридку можно наносить без полировки и на улице", "products": ["Гибридная керамика", "70% Isopropyl Alcohol Spray", "Микрофибра"]}, {"n": "18", "title": "Как действует керамика", "part": "Полировка и керамика", "lead": "Мойка машины в керамике на мойке самообслуживания: гидрофобный эффект на практике и как объяснять клиенту пользу покрытия.", "points": ["Вода стекает и не держится, грязь и эмблемы отмываются заметно проще", "Нанести активную пену мойки на колёса, арки и кузов, мыть своей мягкой мочалкой сверху вниз, низ — в самом конце", "Продуть воздухом, не касаясь шлангом кузова, вытереть сухой мягкой фиброй", "Активная пена на мойках снимает верхний слой керамики — дома мойте шампунями для воска и керамики", "Керамика защищает от солнца, птичьего помёта, грязи и реагентов", "Эффект «тряпка собирает воду за проход» — заслуга керамики, а не фибры"], "tip": "Никогда не мойте машину и диски щётками самомойки — поцарапаете; берите свою мочалку и перчатки", "products": ["Активная пена", "Шампунь для воска и керамики", "Мочалка", "Микрофибра"]}, {"n": "19", "title": "Пылесос и торнадор. Чистка ковролина", "part": "Салон", "lead": "С чего начинать салон: продувка торнадором, пылесос и химчистка ковролина Tuff Stuff щёткой на шуруповёрте.", "points": ["Сначала продуть весь салон торнадором сверху вниз, включая дверные карты и педали", "Затем пылесос: переднее кресло максимально назад, пылесос не должен касаться двери", "Tuff Stuff на ковролин, пройти щёткой на шуруповёрте, особенно места с солью", "Пропылесосить и ещё раз пройти торнадором", "Задний ряд: кресло вперёд, убрать мусор, пылесос, торнадор", "Пример цены: Mercedes GLS интерьер + экстерьер — $300"], "tip": "Всегда сначала продувка, потом пылесос: торнадор выбивает мусор, который пылесос не заметит", "products": ["Торнадор", "Tuff Stuff", "Шуруповёрт DeWalt", "Пылесос"]}, {"n": "20", "title": "Отпариватель. Выведение глубоких пятен", "part": "Салон", "lead": "Как убрать с ковролина пятна, которые не берёт химия: пар, Tuff Stuff, щётка и повторный пылесос.", "points": ["Распарить пятна отпаривателем", "Нанести Tuff Stuff и сначала распределить пену ручной щёткой для ковров", "Затем пройти щёткой на шуруповёрте", "Пропылесосить, собрав химию и поднятый песок", "Оставшиеся пятна — точечно Tuff Stuff и вручную щёткой, снова пылесос", "Пар также размягчает жвачку и присохшие загрязнения"], "tip": "Пену распределяйте ручной щёткой до дрели — иначе она разлетится по салону", "products": ["Отпариватель", "Tuff Stuff", "Carpet brush", "Шуруповёрт"]}, {"n": "21", "title": "Кожаные сиденья, панели, торпедо, подлокотники", "part": "Салон", "lead": "Чистка кожи и органов управления по элементам: щётка из конского волоса, очиститель, фибра и торнадор.", "points": ["Сиденье по элементам: Jay Leno's Garage Leather Cleaner на щётку, пройти, сразу вытереть фиброй", "Щётка 100% конский волос — можно давить, не царапает и вычищает поры", "Двери и кнопки — Leather Cleaner, Xpress Interior Cleaner или Tuff Stuff на щётку или кисточку, затем фибра и торнадор", "Руль: Leather Cleaner на кисточку, с центра, прокручивая; места хвата снизу и по бокам самые грязные", "Не забыть подрулевые переключатели, селектор, кнопки, подстаканники и педали", "Работать на остывших сиденьях: на солнце химия быстро сохнет"], "tip": "Не брызгайте химию прямо на кожу — останутся пятна и белые точки; пшикайте на щётку в сторону от машины", "products": ["Jay Leno's Garage Leather Cleaner", "Xpress Interior Cleaner", "Tuff Stuff", "Horsehair brush", "Торнадор"]}, {"n": "22", "title": "Тканевые сиденья", "part": "Салон", "lead": "Как отмыть тканевые сиденья одной химией, без экстрактора и пара: пена, щётка и мокрые фибры.", "points": ["Нанести пенный очиститель для ткани на сиденье, начиная из центра", "Работать по одному квадрату, щётка сначала горизонтально, потом вертикально", "Когда пена очистителя коричневая — собрать грязь почти мокрой фиброй, повторить 2 раза", "Финальный проход новой сильно мокрой фиброй, чтобы забрать остатки химии", "Дать высохнуть; ускорить можно пылесосом или печкой"], "tip": "Меняйте грязную фибру на новую — иначе просто размажете грязь по ткани", "products": ["Пенный очиститель для ткани", "Щётка", "Микрофибра"]}, {"n": "23", "title": "Тканевые сиденья и экстрактор", "part": "Салон", "lead": "Удаление пятен с ткани экстрактором с порошками Bridgepoint Flex Fire и Flex Ice.", "points": ["Bridgepoint Flex Fire: 1 мерная ложка на распылительную бутылку, перемешать, распылить на сиденье", "Экстрактором вытянуть воду, пока в окошке насадки не перестанет идти вода", "Bridgepoint Flex Ice: 1 ложка на бутылку, пару пшиков на участок и протереть фиброй", "Flex Ice нейтрализует Flex Fire, после него больше ничего не нужно"], "tip": "Вытягивайте всю воду после экстракции — в сиденье ничего не должно остаться", "products": ["Bridgepoint Flex Fire", "Bridgepoint Flex Ice", "Экстрактор"]}, {"n": "24", "title": "Чистка потолка", "part": "Салон", "lead": "Как безопасно чистить потолочную обивку минимумом влаги, чтобы не было разводов и отклеивания.", "points": ["Оценить потолок: если обивка уже «плывёт» или отклеивается — не чистить или очень аккуратно", "Две фибры: сухая и влажная, но не мокрая; влажную сложить в 4 раза", "Tuff Stuff распылять на фибру, а не на потолок", "Мыть весь потолок целиком, а не только пятно; при необходимости пройти ещё раз", "Дотереть сухой фиброй"], "tip": "Если чистить только пятно, останется круглый развод; много влаги растворит клей и потолок провиснет", "products": ["Tuff Stuff", "Микрофибра"]}, {"n": "25", "title": "Пример работы озонатора", "part": "Салон", "lead": "Как убрать запахи и продезинфицировать салон озонатором после химчистки и как безопасно проветрить машину.", "points": ["Сначала полная химчистка; салон сухой и без вещей", "Поставить озонатор, таймер 30–60 минут по силе запаха, закрыть двери", "Пока он работает, заниматься внешней мойкой", "Затем открыть все двери и багажник, проветрить, завести машину и включить вентиляцию", "При сильном запахе рекомендовать замену салонного фильтра", "Убивает запах животных, курения, еды, плесени"], "tip": "Кондиционер для кожи — только после озона, иначе он будет работать неправильно; озоном дышать нельзя", "products": ["Озонатор", "Салонный фильтр"]}, {"n": "26", "title": "Кондиционирование кожи и пластика", "part": "Салон", "lead": "Как наносить кондиционер на кожу и пластик, зачем это нужно и как часто делать.", "points": ["Нанести полосу Jay Leno's Garage Leather Conditioner на губку-аппликатор, сжать и пропитать полностью", "Распределить по сиденью; сначала будет блеск, после впитывания — снова матовость", "Кондиционером можно обработать весь салон: пластик, сиденья, торпедо, руль", "В новой машине достаточно сидений и кожаных элементов", "Сиденья кондиционировать обязательно 2 раза в год — зимой и летом"], "tip": "Заломы и трещины на коже появляются, когда кондиционер не используют с самого начала", "products": ["Jay Leno's Garage Leather Conditioner", "Губка-аппликатор"]}, {"n": "27", "title": "Резиновые коврики", "part": "Салон", "lead": "Быстрая мойка и сушка резиновых ковриков Tuff Stuff и щёткой на дрели.", "points": ["Коврики — практически в последнюю очередь, на чистом подметённом месте", "Смыть водой, нанести Tuff Stuff", "Сразу пройти щёткой на дрели по полосам и швам в обе стороны", "Смыть пену, стряхнуть и высушить торнадором", "При необходимости начернить чернителем для ковриков (из списка химии автора)"], "tip": "Не сушите коврики на солнце — останутся пятна от воды; используйте торнадор", "products": ["Tuff Stuff", "Шуруповёрт", "Торнадор", "Чернитель ковриков"]}, {"n": "28", "title": "Тканевые коврики", "part": "Салон", "lead": "Глубокая чистка тканевых ковриков по аналогии с ковролином и финальные «полосы», которые любят американцы.", "points": ["Пропылесосить, пройти щёткой на шуруповёрте, стряхнуть, собрать шерсть", "Нанести Tuff Stuff по всему коврику, растереть и снова пройти шуруповёртом", "Продуть швы торнадором — выходит песок; при сильной грязи торнадор нужен в начале", "Снова пылесос и шуруповёрт; остатки пятен — вручную щёткой для ковров", "Нарисовать полосы щёткой-гребнем ровно, сверху вниз или по диагонали"], "tip": "Полосы необязательны, но клиенты их любят — если вышло криво, проведите заново", "products": ["Tuff Stuff", "Шуруповёрт", "Торнадор", "Carpet brush"]}, {"n": "29", "title": "Стёкла и экраны", "part": "Финал", "lead": "Как получить стёкла и зеркала без разводов спиртом и микрофиброй и почему экраны протирают только сухой новой фиброй.", "points": ["Экраны и глянцевые панели — новой, мягкой, не стиранной фиброй до блеска", "Стёкла — та же фибра с 4 пшиками 70% изопропилового спирта", "Лобовое изнутри пшикать аккуратно, не на панель и резинки; проверять на солнце", "Боковые стёкла приспустить и протереть верхнюю кромку; углы проверять несколько раз", "Зеркала, хром, решётка, значок и фары — водный камень снимается фиброй с 70% спиртом"], "tip": "Спирт и химию на экраны не наносить, а стиранной фиброй экран можно поцарапать", "products": ["70% Isopropyl Alcohol Spray", "Микрофибра"]}, {"n": "30", "title": "Чернение колёс", "part": "Финал", "lead": "Чернение шин в два слоя через аппликатор и финальная проверка машины перед сдачей клиенту.", "points": ["Jay Leno's Garage Tire Shine — на аппликатор, не на колесо; наносить по боковине, кроме пятна контакта", "Два слоя Tire Shine: первый впитывается, второй держит блеск", "Прокатить машину и начернить нижний участок, промазать внутренний перелом шины у диска", "Оставить одноразовый коврик, новую фибру, 2–3 визитки и ароматизатор", "Проверить руль, стёкла, ряды сидений, багажник, проёмы, лючок, под детским креслом", "Ключи держать при себе и отдать клиенту лично"], "tip": "Многие детейлеры забывают низ колеса и внутренний перелом шины — клиенты это видят", "products": ["Jay Leno's Garage Tire Shine", "Аппликатор VIKING", "Визитки"]}, {"n": "31", "title": "Полировка фар", "part": "Финал", "lead": "Восстановление прозрачности фар набором: очищение, мокрая шлифовка 2000 и 3000 и финишное средство.", "points": ["Надеть перчатки", "Очищающее средство № 1 из набора: нанести на фару и вытереть грязь", "Мокрая шлифовка абразивом 2000, сбрызгивая водой, движения вправо-влево", "Шлифовка абразивом 3000, постоянно смачивая водой", "Финишное средство № 3 из набора — фара становится прозрачной"], "tip": "Шлифуйте только мокрым способом и строго поперечными движениями", "products": ["Набор для восстановления фар", "Абразив 2000", "Абразив 3000", "Пульверизатор с водой"]}, {"n": "32", "title": "Старт и развитие бизнеса", "part": "Бизнес", "lead": "Как оформить мобильный детейлинг в США, выставить цены и найти первых клиентов через сарафан, соцсети и местные группы.", "points": ["Бухгалтер, LLC или S-Corp, бизнес-счёт; страховка (~$25/мес) и лицензия — по требованиям штата", "Оплаты Zelle, Venmo, PayPal, наличные, чек — всё на компанию; расходы списываются", "Ориентир цен: интерьер $200–300, экстерьер +$50–100, полировка $500, керамика с полировкой $800", "На старте — цены конкурентов; через год с репутацией поднимать на $50–100", "Yard sign с QR-кодом у дома клиента, мерч, оклейка, слова «мобильный детейлинг» везде", "Местные Facebook-группы школьных округов и отзывы в Google Business"], "tip": "Сарафан в США работает сильнее всего: соседи видят, как вы работаете, — всегда держите визитки", "products": ["Zelle", "Venmo", "Google Business Profile", "Yard sign"]}, {"n": "33", "title": "Интервью с клиентом", "part": "Бизнес", "lead": "Разговор с постоянным клиентом Ником о том, почему он выбирает мобильный детейлинг, а не детейлинг-центр.", "points": ["Главное — удобство: не нужно ехать через город, ждать и вызывать Uber", "Раньше клиенту приходилось планировать весь день вокруг детейлинг-центра", "Мобильный мастер приезжает сам, например в воскресенье утром", "Клиент предпочитает relationship business — долгие отношения с одним исполнителем", "Владелец отвечает своей репутацией, в отличие от сотрудника обычного шопа", "Нашёл автора по посту в группе на Facebook"], "tip": "Позиционируйте себя как владельца: клиент доверяет тому, кто лично отвечает за результат", "products": []}, {"n": "34", "title": "Маркетинг", "part": "Бизнес", "lead": "Приглашённый спикер, владелец маркетингового агентства, о платной рекламе для сферы услуг: Meta Ads, Google Ads, Google Maps, SEO и лендинг.", "points": ["Новому бизнесу: Google Ads + лендинг или Facebook Ads + лендинг; Maps добавить через 2–3 месяца", "Meta Ads — быстрый старт и дешёвые заявки; анализ конкурентов в Ad Library, видео до/после", "Google Ads — самые качественные лиды; бюджет ~$50 в день, заявка дороже Facebook на 20–30%", "Google Maps: свои живые фото, локальные ключевые слова, ответ на каждый отзыв", "Вести таблицу заявок и продаж: дешёвые заявки ещё не значат продажи", "Скидку за отзыв (~5%) давать на следующую услугу, а не сейчас"], "tip": "Не запускайте рекламу без отслеживания продаж — без отчётности бюджет уходит впустую", "products": ["Meta Ads", "Google Ads", "Google Maps", "Ad Library"]}];
+const META = {"01": {"file": "01.mp4", "dur": 548.5, "ts": [40.1, 107.0, 173.9, 240.8, 307.7, 374.6, 441.5, 508.3], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "02": {"file": "02.mp4", "dur": 369.7, "ts": [27.0, 72.1, 117.2, 162.3, 207.4, 252.5, 297.5, 342.6], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "03": {"file": "03.mp4", "dur": 943.4, "ts": [69.0, 184.1, 299.1, 414.2, 529.2, 644.3, 759.3, 874.4], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "04": {"file": "04.mp4", "dur": 377.0, "ts": [27.6, 73.6, 119.5, 165.5, 211.5, 257.5, 303.5, 349.5], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "05": {"file": "05.mp4", "dur": 647.4, "ts": [47.4, 126.3, 205.3, 284.2, 363.2, 442.1, 521.1, 600.0], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "06": {"file": "06.mp4", "dur": 395.4, "ts": [28.9, 77.2, 125.4, 173.6, 221.8, 270.0, 318.3, 366.5], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "07": {"file": "07.mp4", "dur": 543.8, "ts": [39.8, 106.1, 172.4, 238.7, 305.1, 371.4, 437.7, 504.0], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "08": {"file": "08.mp4", "dur": 391.7, "ts": [28.7, 76.4, 124.2, 172.0, 219.7, 267.5, 315.3, 363.0], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "09": {"file": "09.mp4", "dur": 169.3, "ts": [12.4, 33.0, 53.7, 74.3, 95.0, 115.6, 136.3, 156.9], "v": [1, 1, 1, 1, 1, 1, 1, 1], "size": 0}, "10": {"file": "10.mp4", "dur": 425.9, "ts": [31.2, 83.1, 135.1, 187.0, 238.9, 290.9, 342.8, 394.8], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "11": {"file": "11.mp4", "dur": 234.5, "ts": [17.2, 45.8, 74.4, 103.0, 131.6, 160.2, 188.8, 217.4], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "12": {"file": "12.mp4", "dur": 1150.9, "ts": [84.2, 224.6, 364.9, 505.3, 645.6, 786.0, 926.3, 1066.7], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "13": {"file": "13.mp4", "dur": 1073.0, "ts": [78.5, 209.4, 340.2, 471.1, 601.9, 732.8, 863.6, 994.5], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "14": {"file": "14.mp4", "dur": 160.0, "ts": [11.7, 31.2, 50.7, 70.2, 89.7, 109.3, 128.8, 148.3], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "15": {"file": "15.mp4", "dur": 385.0, "ts": [28.2, 75.1, 122.1, 169.0, 216.0, 263.0, 309.9, 356.9], "v": [1, 1, 1, 0, 1, 0, 0, 1], "size": 0}, "16": {"file": "16.mp4", "dur": 932.0, "ts": [68.2, 181.8, 295.5, 409.2, 522.8, 636.5, 750.1, 863.8], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "17": {"file": "17.mp4", "dur": 161.3, "ts": [11.8, 31.5, 51.1, 70.8, 90.5, 110.2, 129.8, 149.5], "v": [0, 0, 1, 1, 0, 1, 1, 1], "size": 0}, "18": {"file": "18.mp4", "dur": 623.0, "ts": [45.6, 121.6, 197.5, 273.5, 349.5, 425.5, 501.5, 577.4], "v": [1, 1, 1, 1, 1, 1, 0, 1], "size": 0}, "19": {"file": "19.mp4", "dur": 565.8, "ts": [41.4, 110.4, 179.4, 248.4, 317.4, 386.4, 455.4, 524.4], "v": [0, 1, 0, 0, 0, 1, 0, 0], "size": 0}, "20": {"file": "20.mp4", "dur": 296.9, "ts": [21.7, 57.9, 94.1, 130.3, 166.5, 202.7, 238.9, 275.1], "v": [0, 1, 1, 1, 1, 1, 1, 1], "size": 0}, "21": {"file": "21.mp4", "dur": 584.3, "ts": [42.8, 114.0, 185.3, 256.5, 327.8, 399.1, 470.3, 541.6], "v": [1, 0, 0, 1, 0, 1, 1, 0], "size": 0}, "22": {"file": "22.mp4", "dur": 161.3, "ts": [11.8, 31.5, 51.1, 70.8, 90.5, 110.2, 129.8, 149.5], "v": [1, 1, 1, 1, 1, 1, 1, 1], "size": 0}, "23": {"file": "23.mp4", "dur": 77.3, "ts": [5.7, 15.1, 24.5, 34.0, 43.4, 52.8, 62.3, 71.7], "v": [1, 1, 1, 1, 1, 0, 1, 1], "size": 0}, "24": {"file": "24.mp4", "dur": 174.8, "ts": [12.8, 34.1, 55.4, 76.7, 98.1, 119.4, 140.7, 162.0], "v": [1, 1, 1, 1, 0, 1, 0, 0], "size": 0}, "25": {"file": "25.mp4", "dur": 102.7, "ts": [7.5, 20.0, 32.6, 45.1, 57.6, 70.2, 82.7, 95.2], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "26": {"file": "26.mp4", "dur": 149.4, "ts": [10.9, 29.1, 47.4, 65.6, 83.8, 102.0, 120.2, 138.4], "v": [0, 1, 0, 1, 0, 1, 0, 0], "size": 0}, "27": {"file": "27.mp4", "dur": 154.1, "ts": [11.3, 30.1, 48.9, 67.7, 86.5, 105.2, 124.0, 142.8], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "28": {"file": "28.mp4", "dur": 360.0, "ts": [26.3, 70.3, 114.2, 158.1, 202.0, 245.9, 289.8, 333.7], "v": [1, 1, 1, 0, 1, 1, 0, 1], "size": 0}, "29": {"file": "29.mp4", "dur": 457.0, "ts": [33.4, 89.2, 144.9, 200.7, 256.4, 312.1, 367.9, 423.6], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "30": {"file": "30.mp4", "dur": 443.8, "ts": [32.5, 86.6, 140.7, 194.8, 248.9, 303.0, 357.2, 411.3], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "31": {"file": "31.mp4", "dur": 53.1, "ts": [3.9, 10.4, 16.8, 23.3, 29.8, 36.3, 42.8, 49.2], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "32": {"file": "32.mp4", "dur": 716.0, "ts": [52.4, 139.7, 227.0, 314.4, 401.7, 489.0, 576.3, 663.7], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "33": {"file": "33.mp4", "dur": 253.7, "ts": [18.6, 49.5, 80.4, 111.4, 142.3, 173.2, 204.2, 235.1], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}, "34": {"file": "34.mp4", "dur": 2622.3, "ts": [191.9, 511.7, 831.5, 1151.3, 1471.0, 1790.8, 2110.6, 2430.4], "v": [0, 0, 0, 0, 0, 0, 0, 0], "size": 0}};
+const VIDEO_DIR = "video/";
+// demo build: list of lessons that ship with video; null in the full course
+const DEMO = ["09", "14", "22"];
+const hasVideo = n => !DEMO || DEMO.includes(n);
+const PARTS = [
+  ['I','Вступление','Что такое мобильный детейлинг и как проходит работа у клиента.'],
+  ['II','Оборудование и химия','Стартовый и максимальный набор, химия и оснащение рабочей машины.'],
+  ['III','Этапы и экстерьер','Порядок работ, двигатель, диски, колёса и мойка кузова.'],
+  ['IV','Полировка и керамика','Коррекция лакокрасочного покрытия, круги и пасты, керамика и гибриды.'],
+  ['V','Салон','Ковролин, пятна, кожа, ткань, потолок, озон и коврики.'],
+  ['VI','Финал','Стёкла и экраны, чернение колёс, полировка фар.'],
+  ['VII','Бизнес','Старт и рост бизнеса, работа с клиентами и маркетинг.']
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = t => { t = Math.round(t); const m = Math.floor(t/60), s = t%60; return m + ':' + String(s).padStart(2,'0'); };
+const mb = b => b >= 1e9 ? (b/1e9).toFixed(1).replace('.', ',') + ' ГБ' : Math.round(b/1e6) + ' МБ';
+// single-file build: images come from ASSETS (data URIs), videos from embedded base64 blocks; otherwise plain relative paths
+const asset = p => (typeof ASSETS !== 'undefined' && ASSETS[p]) || p;
+const blobs = {};
+function videoURL(p){
+  const box = document.querySelector(`script[data-video="${p}"]`);
+  if (!box) return p;
+  if (!blobs[p]){
+    const bin = atob(box.textContent.trim()), buf = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
+    blobs[p] = URL.createObjectURL(new Blob([buf], {type: 'video/mp4'}));
+  }
+  return blobs[p];
+}
+const frameSrc = (n, i) => asset('frames/' + n + '/' + i + '.jpg');
+// index (1-based) of the first landscape frame at or after position i, or 0 if the lesson is all vertical
+const wideIdx = (n, i) => { const v = META[n]?.v || []; for (let k = 0; k < v.length; k++){ const j = (i - 1 + k) % v.length; if (!v[j]) return j + 1; } return 0; };
+const wide = (n, i) => frameSrc(n, wideIdx(n, i) || i);
+const store = {
+  get(k, d){ try { const v = localStorage.getItem('mdpro:' + k); return v === null ? d : JSON.parse(v); } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem('mdpro:' + k, JSON.stringify(v)); } catch(e){} }
+};
+const ico = {
+  play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>',
+  full:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>',
+  zoom:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg>',
+  down:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>',
+  next:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+};
+const lessonsWord = n => n % 10 === 1 && n % 100 !== 11 ? 'урок' : [2,3,4].includes(n % 10) && ![12,13,14].includes(n % 100) ? 'урока' : 'уроков';
+
+// slide list: cover, then each part divider followed by its lessons
+const slides = [{type:'cover'}];
+PARTS.forEach(p => {
+  slides.push({type:'part', part:p});
+  LESSONS.filter(l => l.part === p[1]).forEach(l => slides.push({type:'lesson', l}));
+});
+const lessonSlides = slides.filter(s => s.type === 'lesson');
+const seen = new Set(store.get('seen', []));
+
+function coverHTML(){
+  const parts = PARTS.map(p => {
+    const ls = LESSONS.filter(l => l.part === p[1]);
+    return `<button data-go="part-${p[0]}"><em>${p[0]}</em><b>${p[1]}</b><span>${ls[0].n}–${ls[ls.length-1].n}</span></button>`;
+  }).join('');
+  const total = Object.values(META).reduce((a, m) => a + m.dur, 0);
+  return `<section class="slide cover" data-id="cover">
+    <div class="tx">
+      <div class="top">
+        <div class="caps">Курс PRO · ${lessonSlides.length} видеоуроков · ${Math.floor(total/3600)} ч ${Math.round(total%3600/60)} мин</div>
+        <h1>Мобильный детейлинг</h1>
+        <div class="rule"></div>${DEMO ? `<p class="demo-flag">Демо-версия для согласования. Тексты, кадры и навигация — как в готовом курсе; видео открыты в уроках ${DEMO.join(', ')}.</p>` : ''}
+        <p class="sub">Полный курс Руслана Колисника в том порядке, в котором его стоит проходить. В каждом уроке — описание, полное видео от начала до конца и кадры с таймкодами.</p>
+        <div class="cta"><button class="btn gold" id="startBtn">${ico.play}<span id="startTxt">Начать с первого урока</span></button><button class="btn" id="restartBtn" hidden>Начать сначала</button></div>
+      </div>
+      <div class="parts">${parts}</div>
+    </div>
+    <div class="ph"><img src="${asset('frames/cover.jpg')}" alt="Чёрный внедорожник после детейлинга"></div></section>`;
+}
+function partHTML(p){
+  const ls = LESSONS.filter(l => l.part === p[1]);
+  const items = ls.map(l => `<li><button data-go="${l.n}"><em>${l.n}</em><span>${esc(l.title)}</span><small>${META[l.n] ? fmt(META[l.n].dur) : ''}</small></button></li>`).join('');
+  const total = ls.reduce((a,l) => a + (META[l.n]?.dur || 0), 0);
+  return `<section class="slide part" data-id="part-${p[0]}"><div class="bg"><img src="${wide(ls[0].n, 4)}" alt=""></div>
+    <div class="roman">${p[0]}</div>
+    <div class="caps meta">Часть ${p[0]} из ${PARTS.length} · ${ls.length} ${lessonsWord(ls.length)} · ${Math.round(total/60)} мин</div>
+    <h2>${p[1]}</h2><p class="sub">${p[2]}</p><ol>${items}</ol></section>`;
+}
+function lessonHTML(l, idx){
+  const m = META[l.n] || {ts:[], dur:0, file:'', v:[]};
+  // vertical-only lessons get a triptych of portrait frames instead of one stretched image
+  const heroImg = wideIdx(l.n, 4) ? `<img src="${wide(l.n, 4)}" alt="">` : [2,4,6].map(i => `<img src="${frameSrc(l.n, i)}" alt="">`).join('');
+  const frames = m.ts.map((t,i) => `<div class="frame${m.v?.[i] ? ' v' : ''}" data-t="${t}"><img src="${frameSrc(l.n, i+1)}" alt="Кадр на ${fmt(t)}" loading="lazy">${hasVideo(l.n) ? `<button class="seek" data-seek="${t}" aria-label="Смотреть с ${fmt(t)}"></button>` : `<button class="seek" data-zoom="${i}" aria-label="Открыть кадр крупно"></button>`}<span class="tc">${fmt(t)}</span><button class="zoom" data-zoom="${i}" aria-label="Открыть кадр крупно">${ico.zoom}</button></div>`).join('');
+  const nxt = lessonSlides[idx+1]?.l;
+  const next = nxt ? `<button class="nextup" data-go="${nxt.n}"><img src="${wide(nxt.n, 2)}" alt="" loading="lazy"><span class="in"><span class="caps">Следующий урок · ${nxt.n}</span><b>${esc(nxt.title)}</b></span><span class="arrow">${ico.next}</span></button>`
+                   : `<button class="nextup" data-restart><img src="${asset('frames/cover.jpg')}" alt="" loading="lazy"><span class="in"><span class="caps">Курс пройден</span><b>Начать курс сначала</b></span><span class="arrow">${ico.next}</span></button>`;
+  const prods = (l.products||[]).length ? `<div class="prodbox"><div class="caps">Химия и инструменты урока</div><div class="prods">${l.products.map(p => `<span>${esc(p)}</span>`).join('')}</div></div>` : '';
+  return `<section class="slide lesson" data-id="${l.n}">
+    <header class="hero"><div class="img">${heroImg}</div>
+      <div class="in"><div><div class="caps">Урок ${l.n} из ${lessonSlides.length}<b>${esc(l.part)} · ${fmt(m.dur)}</b></div><h2>${esc(l.title)}</h2></div><div class="num" aria-hidden="true">${l.n}</div></div>
+    </header>
+    <div class="body">
+      <div class="sec"><div class="caps">Об уроке</div><div>
+        <p class="lead">${esc(l.lead)}</p>
+        <ol class="pts">${(l.points||[]).map(p => `<li>${esc(p)}</li>`).join('')}</ol>
+        ${l.tip ? `<div class="tip"><div class="caps">Совет мастера</div><p>${esc(l.tip)}</p></div>` : ''}
+        ${prods}
+      </div></div>
+      <div class="sec"><div class="caps">Полное видео<br><br>${fmt(m.dur)}</div><div>
+        ${hasVideo(l.n) ? `        <div class="player"><video preload="none" controls playsinline controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture disableremoteplayback poster="${asset(`frames/${l.n}/poster.jpg`)}" data-src="${encodeURI(VIDEO_DIR + m.file)}"></video>
+          <button class="cover-play" data-act="start" aria-label="Смотреть урок с начала"><i>${ico.play}</i><span class="caps">Смотреть урок с начала</span></button>
+          <div class="missing">Видео не найдено. Распакуйте архив курса полностью и откройте файл START.html из распакованной папки — рядом с ним должна быть папка video.</div></div>
+        <div class="vbtns">
+          <button class="btn gold" data-act="start">${ico.play}Смотреть с начала</button>
+          <button class="btn" data-act="full">${ico.full}На весь экран</button>
+          <span id="resume-${l.n}"></span>
+        </div>` : `<div class="player demo"><img src="${asset(`frames/${l.n}/poster.jpg`)}" alt="">
+          <div class="demo-note"><span class="caps">Демо-версия</span><p>В полной версии здесь полное видео урока — ${fmt(m.dur)}.</p><span>В демо видео открыты в уроках ${DEMO.join(', ')}.</span></div></div>`}
+      </div></div>
+      <div class="sec"><div class="caps">Кадры урока</div><div>
+        <div class="frames${(m.v||[]).some(Boolean) ? '' : ' even'}">${frames}</div>
+      </div></div>
+      ${next}
+    </div></section>`;
+}
+
+$('#stage').innerHTML = slides.map(s => s.type === 'cover' ? coverHTML() : s.type === 'part' ? partHTML(s.part) : lessonHTML(s.l, lessonSlides.indexOf(s))).join('');
+const els = [...document.querySelectorAll('.slide')];
+
+$('#toc').innerHTML = PARTS.map(p => `<h4><i>${p[0]}</i>${p[1]}</h4>` + LESSONS.filter(l => l.part === p[1]).map(l => `<button data-go="${l.n}" data-toc="${l.n}"><em>${l.n}</em><span>${esc(l.title)}</span></button>`).join('')).join('');
+
+let cur = -1;
+const firstN = () => lessonSlides[0].l.n, lastN = () => lessonSlides.at(-1).l.n;
+// lesson to resume from, or null when there is nothing to resume (not started, still on lesson 01, or course finished)
+const resumeId = () => { const l = store.get('last', null); return l && l !== firstN() && l !== lastN() ? l : null; };
+function video(el){ return el?.querySelector('video'); }
+function ensureSrc(v){
+  if (v && !v.src){
+    v.preload = 'metadata';
+    v.src = videoURL(v.dataset.src);
+    v.addEventListener('error', () => v.closest('.player').classList.add('err'), {once:true});
+  }
+}
+function updateSeen(){
+  const n = seen.size;
+  $('#prog').style.width = (n / lessonSlides.length * 100) + '%';
+  $('#seenTxt').textContent = n ? `Просмотрено ${n} из ${lessonSlides.length}` : `${lessonSlides.length} видеоуроков по порядку`;
+  document.querySelectorAll('[data-toc]').forEach(b => b.classList.toggle('seen', seen.has(b.dataset.toc)));
+  // resume only mid-course: after the final lesson, or before any lesson, the main button starts from lesson 01
+  const r = resumeId();
+  $('#startTxt').textContent = r ? `Продолжить с урока ${r}` : (store.get('last', null) === lastN() ? 'Начать сначала' : 'Начать с первого урока');
+  $('#restartBtn').hidden = !r;
+}
+function show(i, push = true){
+  i = Math.max(0, Math.min(els.length - 1, i));
+  if (i === cur) return;
+  const old = els[cur]; const v0 = video(old); if (v0 && !v0.paused) v0.pause();
+  old?.classList.remove('on');
+  cur = i; const el = els[i]; el.classList.add('on'); el.scrollTop = 0;
+  const id = el.dataset.id;
+  if (push) history.replaceState(null, '', '#' + id);
+  $('#count').textContent = (i+1) + ' / ' + els.length;
+  document.querySelectorAll('[data-toc]').forEach(b => b.classList.toggle('on', b.dataset.toc === id));
+  $('[data-toc="' + id + '"]')?.scrollIntoView({block:'nearest'});
+  const v = video(el);
+  if (v){
+    const pos = store.get('pos:' + id, 0);
+    $('#resume-' + id).innerHTML = pos > 20 ? `<button class="btn" data-seek="${pos}">Продолжить с ${fmt(pos)}</button>` : '';
+    ensureSrc(v);
+    store.set('last', id);
+  }
+  if (id === 'cover') updateSeen();
+  $('#rail').classList.remove('open');
+}
+function fullVideo(v){
+  ensureSrc(v);
+  v.closest('.player').classList.add('started');
+  (v.requestFullscreen || v.webkitRequestFullscreen || v.webkitEnterFullscreen)?.call(v);
+  if (v.paused) v.play().catch(()=>{});
+}
+const idxOf = id => els.findIndex(e => e.dataset.id === id);
+function seek(t){
+  const v = video(els[cur]); if (!v) return;
+  ensureSrc(v);
+  v.closest('.player').classList.add('started');
+  const go = () => { v.currentTime = +t; v.play().catch(()=>{}); };
+  v.readyState >= 1 ? go() : v.addEventListener('loadedmetadata', go, {once:true});
+  v.closest('.player').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+// video events: remember position, mark seen, highlight current frame
+document.querySelectorAll('video').forEach(v => {
+  const id = v.closest('.slide').dataset.id;
+  v.addEventListener('play', () => { v.closest('.player').classList.add('started'); seen.add(id); store.set('seen', [...seen]); updateSeen(); });
+  let last = 0;
+  v.addEventListener('timeupdate', () => {
+    const t = v.currentTime;
+    if (Math.abs(t - last) > 5){ last = t; store.set('pos:' + id, t > v.duration - 15 ? 0 : t); }
+    const fr = [...v.closest('.slide').querySelectorAll('.frame')];
+    let k = -1; fr.forEach((f, j) => { if (t >= +f.dataset.t - 2) k = j; });
+    fr.forEach((f, j) => f.classList.toggle('cur', j === k));
+  });
+  v.addEventListener('dblclick', () => fullVideo(v));
+});
+
+// no "save video as" / "save image as" from the context menu, no dragging media out of the page
+document.addEventListener('contextmenu', e => { if (e.target.closest('video, img, .player, .frame, .lb')) e.preventDefault(); });
+document.addEventListener('dragstart', e => { if (e.target.closest('img, video')) e.preventDefault(); });
+
+// one tab at a time: a newer tab takes over and the older one shows a notice
+const TAB = Math.random().toString(36).slice(2);
+let bc = null; try { bc = new BroadcastChannel('mdpro-tab'); } catch(e){}
+function lockOut(){
+  document.querySelectorAll('video').forEach(v => v.pause());
+  $('#tablock').hidden = false;
+}
+if (bc && !DEMO){
+  bc.onmessage = e => { if (e.data?.type === 'open' && e.data.tab !== TAB) lockOut(); };
+  bc.postMessage({type: 'open', tab: TAB});
+}
+$('#tablockBtn').onclick = () => { $('#tablock').hidden = true; bc?.postMessage({type: 'open', tab: TAB}); };
+
+// lightbox
+let lbI = 0, lbFrom = null;
+function lbShow(i){
+  const id = els[cur].dataset.id, m = META[id]; lbI = (i + m.ts.length) % m.ts.length;
+  $('#lbImg').src = frameSrc(id, lbI + 1);
+  $('#lbImg').alt = `Урок ${id}, кадр на ${fmt(m.ts[lbI])}`;
+  $('#lbCap').textContent = `Урок ${id} · кадр ${lbI+1} из ${m.ts.length} · ${fmt(m.ts[lbI])}`;
+  if (!$('#lb').classList.contains('on')) lbFrom = document.activeElement;
+  $('#lbPlay').hidden = !hasVideo(id);
+  $('#lb').classList.add('on'); $('#lbX').focus();
+}
+const lbClose = () => { $('#lb').classList.remove('on'); lbFrom?.focus?.(); };
+$('#lbX').onclick = lbClose;
+$('#lbL').onclick = () => lbShow(lbI - 1);
+$('#lbR').onclick = () => lbShow(lbI + 1);
+$('#lbPlay').onclick = () => { lbClose(); seek(META[els[cur].dataset.id].ts[lbI]); };
+$('#lb').addEventListener('click', e => { if (e.target.id === 'lb') lbClose(); });
+
+document.addEventListener('click', e => {
+  if (e.target.closest('[data-restart]')){ restart(); return; }
+  const g = e.target.closest('[data-go]'); if (g){ show(idxOf(g.dataset.go)); return; }
+  const s = e.target.closest('[data-seek]'); if (s){ seek(s.dataset.seek); return; }
+  const z = e.target.closest('[data-zoom]'); if (z){ lbShow(+z.dataset.zoom); return; }
+  const a = e.target.closest('[data-act]'); if (a){
+    const v = video(els[cur]);
+    if (a.dataset.act === 'start') seek(0);
+    if (a.dataset.act === 'full' && v) fullVideo(v);
+  }
+});
+function restart(){ store.set('last', null); show(idxOf(lessonSlides[0].l.n)); }
+$('#startBtn').onclick = () => { const r = resumeId(); r ? show(idxOf(r)) : restart(); };
+$('#restartBtn').onclick = restart;
+$('#prevBtn').onclick = () => show(cur - 1);
+$('#nextBtn').onclick = () => show(cur + 1);
+$('#menuBtn').onclick = () => $('#rail').classList.toggle('open');
+$('#fsBtn').onclick = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.();
+document.addEventListener('keydown', e => {
+  if ($('#lb').classList.contains('on')){
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') lbShow(lbI - 1);
+    if (e.key === 'ArrowRight') lbShow(lbI + 1);
+    return;
+  }
+  // while a video is fullscreen, arrows belong to the video player, not to slide navigation
+  if (document.fullscreenElement?.tagName === 'VIDEO') return;
+  if (e.target.tagName === 'VIDEO' || e.target.tagName === 'INPUT') return;
+  if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); show(cur + 1); }
+  if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(cur - 1); }
+  if (e.key === 'Escape') $('#rail').classList.remove('open');
+  if (e.key === 'f' || e.key === 'F' || e.key === 'а' || e.key === 'А'){ const v = video(els[cur]); v ? fullVideo(v) : $('#fsBtn').click(); }
+});
+window.addEventListener('hashchange', () => { const i = idxOf(location.hash.slice(1)); if (i >= 0) show(i, false); });
+
+updateSeen();
+show(Math.max(0, idxOf(location.hash.slice(1))), false);
+</script>
+</body>
+</html>
