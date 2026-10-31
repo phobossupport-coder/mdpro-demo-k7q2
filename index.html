@@ -395,6 +395,8 @@ img{display:block}
 .frame .tc{position:absolute;left:0;bottom:0;padding:6px 10px;font-family:var(--serif);font-size:16px;background:linear-gradient(0deg,rgba(7,8,10,.8),transparent);width:100%}
 .frame .zoom{position:absolute;right:8px;top:8px;width:34px;height:34px;background:rgba(7,8,10,.7);border:1px solid var(--hair2);display:grid;place-items:center;opacity:0;transition:opacity .25s}
 .frame:hover .zoom,.frame:focus-within .zoom{opacity:1}
+/* touch screens have no hover: keep the zoom button visible and small so the rest of the frame seeks the video */
+@media (hover:none){.frame .zoom{opacity:1;width:28px;height:28px;right:4px;top:4px}}
 .frame .zoom svg{width:14px;height:14px}
 .frame>button.seek{position:absolute;inset:0}
 .frame.cur{outline:1px solid var(--gold);outline-offset:-1px}
@@ -464,7 +466,7 @@ img,video{-webkit-user-drag:none;user-select:none}
   .sec{padding:40px 0}
   .tip{grid-template-columns:1fr;gap:12px}
   .frames.even{grid-template-columns:repeat(2,1fr)}
-  .frame{flex-basis:140px}.frame.v{flex-basis:44px}
+  .frame{flex-basis:140px}.frame.v{flex-basis:76px}
   .vbtns .btn{flex:1}
   .nextup{height:220px}
   .nextup .in{padding:24px}
